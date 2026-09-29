@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ecomercado | Compra, reutiliza y cambia</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap');
+:root{--green:#176b4b;--green2:#2c8b63;--mint:#e9f5ee;--cream:#fbfaf5;--dark:#16352a;--text:#405148;--line:#dce7df;--white:#fff}
+*{box-sizing:border-box;scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--text);font-family:'DM Sans',sans-serif}.topbar{position:sticky;top:0;z-index:20;background:rgba(251,250,245,.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;padding:15px 6%;gap:20px}.brand{display:flex;align-items:center;gap:10px;color:var(--dark)}.brand b{font-size:1.35rem}.brand small{display:block;color:#769083;font-size:.72rem}.logo{width:38px;height:38px;border-radius:12px;background:var(--green);color:white;display:grid;place-items:center;font-size:22px}nav{display:flex;align-items:center;gap:22px}nav a{color:var(--dark);text-decoration:none;font-weight:600;font-size:.9rem}nav a:hover{color:var(--green2)}.cart-btn{border:0;background:var(--mint);color:var(--green);font-weight:700;border-radius:12px;padding:10px 13px;cursor:pointer}.hero{min-height:620px;padding:75px 8%;display:grid;grid-template-columns:1.2fr .8fr;align-items:center;gap:60px;background:radial-gradient(circle at 90% 20%,#dcefe4,transparent 35%),var(--cream)}.pill{display:inline-block;padding:8px 13px;border-radius:99px;background:#e4f2e9;color:var(--green);font-weight:700;font-size:.78rem}.hero h1{font-family:'Playfair Display',serif;font-size:clamp(3rem,6vw,5.4rem);line-height:1.02;color:var(--dark);margin:20px 0}.hero h1 em{font-style:normal;color:var(--green2)}.hero p{font-size:1.08rem;line-height:1.8;max-width:640px}.hero-actions{display:flex;gap:12px;margin:28px 0}.btn{display:inline-flex;justify-content:center;align-items:center;border:0;border-radius:13px;padding:13px 19px;text-decoration:none;font-weight:700;cursor:pointer;font-family:inherit}.primary{background:var(--green);color:white}.primary:hover{background:#10563b}.secondary{border:1px solid #b9cec1;color:var(--green);background:white}.white{background:white;color:var(--green)}.mini-stats{display:flex;gap:28px;margin-top:35px}.mini-stats div{display:flex;gap:7px;align-items:center;font-size:.85rem}.mini-stats b{font-size:1.2rem}.hero-card{background:var(--green);color:white;border-radius:34px;padding:48px;min-height:390px;display:flex;flex-direction:column;justify-content:end;box-shadow:0 25px 60px #1a5e431f;position:relative;overflow:hidden}.hero-card:after{content:"";position:absolute;width:230px;height:230px;border-radius:50%;background:#ffffff10;top:-60px;right:-50px}.circle{font-size:90px;margin-bottom:auto}.hero-card h3{font-family:'Playfair Display',serif;font-size:2rem;margin:0 0 12px}.hero-card p{color:#d9eee3;line-height:1.6}.section{padding:90px 8%}.section-head{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:40px}.eyebrow{font-size:.73rem;font-weight:800;letter-spacing:2px;color:var(--green2)}h2{font-family:'Playfair Display',serif;color:var(--dark);font-size:2.5rem;margin:8px 0}.filters{display:flex;gap:8px;flex-wrap:wrap}.filter{border:1px solid var(--line);background:white;padding:9px 13px;border-radius:99px;color:var(--text);cursor:pointer}.filter.active{background:var(--green);color:white}.products{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}.product{background:white;border:1px solid var(--line);border-radius:20px;overflow:hidden;transition:.25s;box-shadow:0 8px 25px #1b5d3c08}.product:hover{transform:translateY(-5px);box-shadow:0 18px 35px #1b5d3c14}.product-img{height:190px;background:linear-gradient(135deg,#e5f3ea,#f8f1df);display:grid;place-items:center;font-size:68px}.product-info{padding:18px}.tag{font-size:.68rem;color:var(--green2);font-weight:800;text-transform:uppercase}.product h3{margin:7px 0;color:var(--dark)}.product p{font-size:.82rem;line-height:1.5;min-height:38px}.price-row{display:flex;justify-content:space-between;align-items:center;margin-top:15px}.price{font-weight:800;color:var(--green);font-size:1.15rem}.add{border:0;background:var(--mint);color:var(--green);padding:9px 11px;border-radius:10px;font-weight:800;cursor:pointer}.how{background:white}.center{text-align:center;display:block}.center p{max-width:650px;margin:auto}.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}.steps article{border:1px solid var(--line);border-radius:20px;padding:25px;position:relative}.steps article>span{position:absolute;right:18px;top:18px;color:#b7c9bf;font-weight:800}.icon{font-size:34px}.steps h3{color:var(--dark);margin-bottom:5px}.steps p{line-height:1.6;font-size:.9rem}.video-section{padding:90px 8%;background:#e9f4ed;display:grid;grid-template-columns:.8fr 1.2fr;gap:55px;align-items:center}.video-copy p{line-height:1.8}.quote{margin-top:22px;border-left:3px solid var(--green2);padding:12px 0 12px 18px;color:var(--green);font-weight:700}.video-box{background:#173b2e;padding:12px;border-radius:24px;box-shadow:0 20px 45px #173b2e20}.video-box iframe{display:block;width:100%;aspect-ratio:16/9;border:0;border-radius:15px}.sell{background:var(--cream)}.sell-card{background:white;border:1px solid var(--line);border-radius:25px;padding:40px;display:grid;grid-template-columns:1fr 1fr;gap:40px}.sell-card p{line-height:1.7}.sell form,.modal form{display:grid;gap:11px}.sell input,.modal input,.modal textarea{width:100%;border:1px solid var(--line);border-radius:11px;padding:13px;font:inherit;outline:none}.modal textarea{min-height:90px;resize:vertical}.sell input:focus,.modal input:focus,.modal textarea:focus{border-color:var(--green2)}.final-cta{padding:65px 8%;background:var(--green);color:white;display:flex;justify-content:space-between;align-items:center;gap:30px}.final-cta h2{color:white;margin-bottom:5px}.final-cta p{margin:0;color:#d9eee3}.pill.light{background:#ffffff18;color:white;border:1px solid #ffffff22}footer{padding:45px 8%;background:#123b2c;color:#d5e8df;display:grid;grid-template-columns:2fr 1fr 1fr;gap:30px;position:relative}footer b{color:white;font-size:1.1rem}footer p{line-height:1.6;font-size:.88rem}footer a{display:block;color:#d5e8df;text-decoration:none;margin-top:8px;font-size:.88rem}.copyright{grid-column:1/-1;border-top:1px solid #ffffff1a;padding-top:18px;font-size:.75rem;color:#9fbdb0}.overlay{position:fixed;inset:0;background:#08251b66;z-index:30;opacity:0;pointer-events:none;transition:.25s}.overlay.show{opacity:1;pointer-events:auto}.cart{position:fixed;right:-430px;top:0;height:100%;width:min(430px,100%);background:white;z-index:31;transition:.3s;padding:24px;display:flex;flex-direction:column;box-shadow:-15px 0 40px #123b2c20}.cart.open{right:0}.cart-head{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--line);padding-bottom:15px}.cart-head h2{font-size:1.8rem}.cart-head button,.modal-close{border:0;background:#f0f5f2;border-radius:10px;width:34px;height:34px;cursor:pointer}.cart-bottom{margin-top:auto;border-top:1px solid var(--line);padding-top:18px}.total{display:flex;justify-content:space-between;font-size:1.1rem;margin-bottom:15px}.total b{color:var(--green)}.full{width:100%}.cart-bottom small{display:block;text-align:center;margin-top:10px;color:#82938c}.cart-item{display:flex;justify-content:space-between;gap:12px;padding:15px 0;border-bottom:1px solid var(--line)}.cart-item b{color:var(--dark)}.remove{border:0;background:none;color:#b35c4c;cursor:pointer}.empty{text-align:center;padding:50px 10px;color:#81928b}.modal-wrap{position:fixed;inset:0;background:#08251b75;z-index:40;display:none;place-items:center;padding:20px}.modal-wrap.show{display:grid}.modal{background:white;width:min(470px,100%);border-radius:24px;padding:32px;position:relative;box-shadow:0 30px 70px #09291e30}.modal-close{position:absolute;right:20px;top:20px}.modal h2{margin-top:8px}.modal p{line-height:1.5}.toast{position:fixed;left:50%;bottom:25px;transform:translate(-50%,20px);background:#123b2c;color:white;padding:13px 18px;border-radius:12px;opacity:0;pointer-events:none;transition:.3s;z-index:50}.toast.show{opacity:1;transform:translate(-50%,0)}@media(max-width:950px){nav a{display:none}.hero,.video-section,.sell-card{grid-template-columns:1fr}.products{grid-template-columns:repeat(2,1fr)}.steps{grid-template-columns:repeat(2,1fr)}.hero{padding-top:55px}.section-head{align-items:flex-start;flex-direction:column}}@media(max-width:560px){.products,.steps{grid-template-columns:1fr}.hero h1{font-size:3rem}.section,.video-section{padding:65px 5%}.topbar{padding:12px 5%}.hero{padding:55px 5%}.hero-card{padding:35px}.mini-stats{gap:15px}.final-cta{padding:50px 5%;flex-direction:column;align-items:flex-start}footer{padding:40px 5%;grid-template-columns:1fr}.copyright{grid-column:auto}}
+
+/* Mitos y verdades */
+.myths{background:#f7f3e8}
+.myth-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;max-width:1000px;margin:auto}
+.myth-card{background:white;border:1px solid var(--line);border-radius:22px;padding:28px;box-shadow:0 10px 30px #173b2c0a;transition:transform .3s,box-shadow .3s}
+.myth-card:hover{transform:translateY(-6px);box-shadow:0 20px 38px #173b2c14}
+.myth-label{display:inline-block;font-size:.68rem;letter-spacing:1.5px;font-weight:800;padding:6px 10px;border-radius:99px;margin-bottom:14px}
+.myth{background:#fff0e8;color:#b65d3c}
+.truth-label{background:#e4f2e9;color:var(--green)}
+.myth-card h3{font-family:'Playfair Display',serif;color:var(--dark);font-size:1.35rem;line-height:1.35;margin:0 0 18px}
+.myth-card button{border:0;background:var(--mint);color:var(--green);font-weight:800;padding:10px 14px;border-radius:10px;cursor:pointer;transition:.2s}
+.myth-card button:hover{background:#d8ebdf}
+.truth{max-height:0;overflow:hidden;opacity:0;transition:max-height .5s ease,opacity .35s ease,margin-top .35s ease;line-height:1.65;font-size:.9rem;color:var(--text)}
+.myth-card.open .truth{max-height:220px;opacity:1;margin-top:17px}
+
+/* Animaciones al aparecer al hacer scroll */
+.reveal{opacity:0;transform:translateY(35px);transition:opacity .75s ease,transform .75s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+.product,.steps article,.myth-card,.sell-card,.hero-card{animation:softIn .7s ease both}
+@keyframes softIn{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+.hero-text{animation:heroIn .8s ease both}
+@keyframes heroIn{from{opacity:0;transform:translateX(-20px)}to{opacity:1;transform:translateX(0)}}
+@media(max-width:950px){.myth-grid{grid-template-columns:1fr}}
+
+
+.myths-section{background:#f7faf7}.myths-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.myth-card{border:1px solid var(--line);background:white;border-radius:20px;padding:24px;text-align:left;cursor:pointer;min-height:245px;transition:.35s;box-shadow:0 8px 25px #1b5d3c08;font-family:inherit;color:var(--text)}.myth-card:hover{transform:translateY(-6px);box-shadow:0 18px 35px #1b5d3c14}.myth-card h3{color:var(--dark);line-height:1.4;margin:12px 0}.myth-label,.truth-label{display:inline-block;font-size:.68rem;font-weight:800;letter-spacing:1px;padding:6px 9px;border-radius:99px;background:#fff0ed;color:#a84e3e}.truth-label{background:#e7f5ec;color:var(--green)}.myth-answer{display:block;max-height:0;overflow:hidden;opacity:0;transition:.4s;line-height:1.6}.myth-card.open{background:#eef8f1}.myth-card.open .myth-answer{max-height:150px;opacity:1;margin-top:12px}.reveal{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease}.reveal.visible{opacity:1;transform:translateY(0)}@media(max-width:950px){.myths-grid{grid-template-columns:repeat(2,1fr)}}@media(max-width:560px){.myths-grid{grid-template-columns:1fr}}
+
+</style>
+</head>
+<body>
+<header class="topbar">
+  <div class="brand"><span class="logo">♻</span><div><b>Ecomercado</b><small>Compra · Vende · Intercambia</small></div></div>
+  <nav>
+    <a href="#inicio">Inicio</a>
+    <a href="#comprar">Comprar</a>
+    <a href="#como">¿Cómo funciona?</a>
+    <a href="#mitos">Mitos y verdades</a>
+    <a href="#video">Video</a>
+    <button class="cart-btn" onclick="openCart()">🛒 <span id="cartCount">0</span></button>
+  </nav>
+</header>
+
+<main>
+<section id="inicio" class="reveal hero">
+  <div class="hero-text">
+    <span class="pill">🌱 Consumo responsable</span>
+    <h1>Lo que ya no usas,<br><em>puede servirle a alguien más.</em></h1>
+    <p>Ecomercado es un espacio creado por estudiantes para darle una segunda oportunidad a útiles, ropa y productos escolares.</p>
+    <div class="hero-actions">
+      <a class="btn primary" href="#comprar">Explorar productos</a>
+      <a class="btn secondary" href="#como">Conocer Ecomercado</a>
+    </div>
+    <div class="mini-stats">
+      <div><b>♻</b><span>Reutilizamos</span></div>
+      <div><b>💚</b><span>Cuidamos</span></div>
+      <div><b>🤝</b><span>Compartimos</span></div>
+    </div>
+  </div>
+  <div class="hero-card">
+    <div class="circle">♻</div>
+    <h3>Una compra también puede ser una acción.</h3>
+    <p>Elige reutilizar antes de comprar algo nuevo.</p>
+  </div>
+</section>
+
+<section id="comprar" class="reveal section reveal">
+  <div class="section-head">
+    <div><span class="eyebrow">NUESTRO CATÁLOGO</span><h2>Encuentra algo que puedas volver a usar</h2></div>
+    <div class="filters">
+      <button class="filter active" onclick="filterProducts('todos',this)">Todos</button>
+      <button class="filter" onclick="filterProducts('utiles',this)">Útiles</button>
+      <button class="filter" onclick="filterProducts('ropa',this)">Ropa</button>
+      <button class="filter" onclick="filterProducts('accesorios',this)">Accesorios</button>
+    </div>
+  </div>
+  <div id="products" class="products"></div>
+</section>
+
+<section id="como" class="reveal how section reveal">
+  <div class="section-head center"><span class="eyebrow">ASÍ DE FÁCIL</span><h2>¿Cómo funciona Ecomercado?</h2><p>Una forma sencilla de comprar, vender e intercambiar dentro de nuestra comunidad.</p></div>
+  <div class="steps">
+    <article><span>01</span><div class="icon">🔎</div><h3>Busca</h3><p>Encuentra un producto que necesites o te interese.</p></article>
+    <article><span>02</span><div class="icon">🛒</div><h3>Elige</h3><p>Agrégalo a tu carrito y revisa tu pedido.</p></article>
+    <article><span>03</span><div class="icon">🤝</div><h3>Coordina</h3><p>Envía tu solicitud y coordina la entrega con el vendedor.</p></article>
+    <article><span>04</span><div class="icon">♻️</div><h3>Reutiliza</h3><p>Dale una nueva vida al producto y reduce residuos.</p></article>
+  </div>
+</section>
+
+
+<section id="mitos" class="myths section reveal">
+  <div class="section-head center">
+    <span class="eyebrow">DESCUBRE LA VERDAD</span>
+    <h2>Mitos y verdades sobre reutilizar</h2>
+    <p>¿Has escuchado que comprar reutilizado es malo o que todo lo usado está en mal estado? Aquí aclaramos algunas ideas.</p>
+  </div>
+  <div class="myth-grid">
+    <article class="myth-card">
+      <div class="myth-label myth">MITO</div>
+      <h3>“Si es reutilizado, significa que está viejo o mal cuidado.”</h3>
+      <button onclick="toggleTruth(this)">Ver la verdad →</button>
+      <div class="truth"><b>VERDAD:</b> Un producto reutilizado puede seguir estando en buen estado y ser útil durante mucho tiempo. Lo importante es revisar su condición antes de comprarlo.</div>
+    </article>
+    <article class="myth-card">
+      <div class="myth-label truth-label">VERDAD</div>
+      <h3>“Reutilizar ayuda a reducir la cantidad de residuos.”</h3>
+      <button onclick="toggleTruth(this)">¿Por qué? →</button>
+      <div class="truth"><b>Porque</b> al darle una segunda oportunidad a un objeto, evitamos desecharlo antes de tiempo y aprovechamos mejor los recursos que ya fueron utilizados para producirlo.</div>
+    </article>
+    <article class="myth-card">
+      <div class="myth-label myth">MITO</div>
+      <h3>“Reutilizar solo sirve para ahorrar dinero.”</h3>
+      <button onclick="toggleTruth(this)">Ver la verdad →</button>
+      <div class="truth"><b>VERDAD:</b> También promueve un consumo más responsable, reduce desperdicios y permite que productos que aún sirven encuentren una nueva persona que los necesite.</div>
+    </article>
+    <article class="myth-card">
+      <div class="myth-label truth-label">VERDAD</div>
+      <h3>“Antes de comprar algo nuevo puedo buscar si alguien ya lo tiene.”</h3>
+      <button onclick="toggleTruth(this)">¿Por qué? →</button>
+      <div class="truth"><b>Porque</b> compartir, intercambiar o comprar de segunda mano puede evitar una compra innecesaria y extender la vida útil de los productos.</div>
+    </article>
+  </div>
+</section>
+
+<section id="video" class="reveal video-section reveal">
+  <div class="video-copy">
+    <span class="eyebrow">MIRA · REFLEXIONA · CAMBIA</span>
+    <h2>¿Por qué importa reutilizar?</h2>
+    <p>Antes de desechar algo, pensemos si todavía puede tener una segunda oportunidad. Las 3R —reducir, reutilizar y reciclar— nos ayudan a consumir de una manera más responsable.</p>
+    <div class="quote">“Pequeños cambios en nuestros hábitos pueden generar grandes cambios en nuestro entorno.”</div>
+  </div>
+  <div class="video-box">
+    <iframe src="https://www.youtube.com/embed/cvakvfXj0KE" title="Video educativo sobre las 3R" allowfullscreen></iframe>
+  </div>
+</section>
+
+<section class="reveal section reveal">
+  <div class="sell-card">
+    <div><span class="eyebrow">¿TIENES ALGO QUE YA NO USAS?</span><h2>Véndelo en Ecomercado</h2><p>Completa este formulario y publica tu producto para que otro estudiante pueda darle una segunda oportunidad.</p></div>
+    <form onsubmit="submitSell(event)">
+      <input required id="sellName" placeholder="Tu nombre">
+      <input required id="sellProduct" placeholder="¿Qué quieres vender?">
+      <input required id="sellPrice" type="number" min="0" step="0.50" placeholder="Precio (S/)">
+      <button class="btn primary" type="submit">Publicar producto</button>
+    </form>
+  </div>
+</section>
+
+<section class="reveal">
+  <div><span class="pill light">🌎 Menos desperdicio, más oportunidades</span><h2>Tu decisión también cuenta.</h2><p>Comprar reutilizado es darle valor a lo que ya existe.</p></div>
+  <a class="btn white" href="#comprar">Ver productos</a>
+</section>
+</main>
+
+<footer>
+  <div><b>Ecomercado</b><p>Proyecto escolar de reutilización y consumo responsable.</p></div>
+  <div><b>Explora</b><a href="#comprar">Comprar</a><a href="#mitos">Mitos y verdades</a>
+    <a href="#video">Video</a><a href="#como">¿Cómo funciona?</a></div>
+  <div><b>Contacto</b><p>Proyecto creado por estudiantes ♻</p></div>
+  <div class="copyright">© 2026 Ecomercado · Hecho con propósito</div>
+</footer>
+
+<div id="overlay" class="overlay" onclick="closeCart()"></div>
+<aside id="cart" class="cart">
+  <div class="cart-head"><h2>Tu carrito</h2><button onclick="closeCart()">✕</button></div>
+  <div id="cartItems"></div>
+  <div class="cart-bottom">
+    <div class="total"><span>Total</span><b id="cartTotal">S/ 0.00</b></div>
+    <button class="btn primary full" onclick="checkout()">Continuar con la compra</button>
+    <small>La compra es una solicitud de coordinación entre estudiantes.</small>
+  </div>
+</aside>
+
+<div id="checkoutModal" class="modal-wrap">
+  <div class="modal">
+    <button class="modal-close" onclick="closeCheckout()">✕</button>
+    <span class="eyebrow">ÚLTIMO PASO</span><h2>Solicitar compra</h2>
+    <p>Completa tus datos para enviar tu solicitud.</p>
+    <form onsubmit="submitOrder(event)">
+      <input required id="buyerName" placeholder="Nombre y apellido">
+      <input required id="buyerClass" placeholder="Grado y sección">
+      <input required id="buyerContact" placeholder="Medio de contacto">
+      <textarea id="buyerNote" placeholder="Mensaje adicional (opcional)"></textarea>
+      <button class="btn primary full" type="submit">Enviar solicitud ♻</button>
+    </form>
+  </div>
+</div>
+
+<div id="toast" class="toast"></div>
+<script>
+const products = [
+ {id:1,name:"Cuaderno casi nuevo",cat:"utiles",price:8.00,icon:"📓",desc:"Hojas en buen estado y tapas cuidadas."},
+ {id:2,name:"Polo escolar",cat:"ropa",price:12.00,icon:"👕",desc:"Talla M · limpio y en buen estado."},
+ {id:3,name:"Mochila reutilizada",cat:"accesorios",price:25.00,icon:"🎒",desc:"Espaciosa, resistente y lista para usar."},
+ {id:4,name:"Colores y plumones",cat:"utiles",price:6.00,icon:"🖍️",desc:"Set con varios colores todavía útiles."},
+ {id:5,name:"Casaca juvenil",cat:"ropa",price:18.00,icon:"🧥",desc:"Abrigo en buen estado para otra temporada."},
+ {id:6,name:"Cartuchera",cat:"accesorios",price:7.00,icon:"👜",desc:"Práctica y limpia, con varios compartimentos."},
+ {id:7,name:"Libro escolar",cat:"utiles",price:10.00,icon:"📚",desc:"Edición usada, páginas completas."},
+ {id:8,name:"Gorra",cat:"accesorios",price:9.00,icon:"🧢",desc:"Accesorio reutilizable en buen estado."}
+];
+let cart = JSON.parse(localStorage.getItem("ecomercadoCart") || "[]");
+
+function money(n){return "S/ " + n.toFixed(2)}
+function renderProducts(cat="todos"){
+ const el=document.getElementById("products");
+ const list=cat==="todos"?products:products.filter(p=>p.cat===cat);
+ el.innerHTML=list.map(p=>`<article class="product">
+  <div class="product-img">${p.icon}</div>
+  <div class="product-info"><span class="tag">${p.cat}</span><h3>${p.name}</h3><p>${p.desc}</p>
+  <div class="price-row"><span class="price">${money(p.price)}</span><button class="add" onclick="addToCart(${p.id})">+ Agregar</button></div></div>
+ </article>`).join("");
+}
+function filterProducts(cat,btn){
+ document.querySelectorAll(".filter").forEach(x=>x.classList.remove("active"));btn.classList.add("active");renderProducts(cat);
+}
+function addToCart(id){
+ const p=products.find(x=>x.id===id);
+ const found=cart.find(x=>x.id===id);
+ if(found) found.qty++; else cart.push({...p,qty:1});
+ saveCart(); openCart(); toast("Producto agregado al carrito ♻");
+}
+function saveCart(){localStorage.setItem("ecomercadoCart",JSON.stringify(cart));renderCart()}
+function renderCart(){
+ const el=document.getElementById("cartItems"), count=document.getElementById("cartCount"), totalEl=document.getElementById("cartTotal");
+ const countN=cart.reduce((a,b)=>a+b.qty,0); count.textContent=countN;
+ if(!cart.length){el.innerHTML='<div class="empty">Tu carrito está vacío.<br>Explora nuestros productos 🌱</div>';totalEl.textContent=money(0);return}
+ el.innerHTML=cart.map((p,i)=>`<div class="cart-item"><div><b>${p.name}</b><div>${p.qty} × ${money(p.price)}</div></div><button class="remove" onclick="removeItem(${i})">Quitar</button></div>`).join("");
+ totalEl.textContent=money(cart.reduce((a,b)=>a+b.price*b.qty,0));
+}
+function removeItem(i){cart.splice(i,1);saveCart()}
+function openCart(){document.getElementById("cart").classList.add("open");document.getElementById("overlay").classList.add("show");renderCart()}
+function closeCart(){document.getElementById("cart").classList.remove("open");document.getElementById("overlay").classList.remove("show")}
+function checkout(){
+ if(!cart.length){toast("Primero agrega un producto al carrito.");return}
+ closeCart();document.getElementById("checkoutModal").classList.add("show");
+}
+function closeCheckout(){document.getElementById("checkoutModal").classList.remove("show")}
+function submitOrder(e){
+ e.preventDefault();
+ const name=document.getElementById("buyerName").value;
+ const total=cart.reduce((a,b)=>a+b.price*b.qty,0);
+ cart=[];saveCart();closeCheckout();e.target.reset();
+ toast("¡Solicitud enviada, "+name+"! Total: "+money(total)+" 💚");
+}
+function submitSell(e){e.preventDefault();e.target.reset();toast("¡Producto enviado! Pronto podrás coordinar su publicación ♻")}
+function toast(msg){const t=document.getElementById("toast");t.textContent=msg;t.classList.add("show");clearTimeout(window.tt);window.tt=setTimeout(()=>t.classList.remove("show"),2800)}
+renderProducts();renderCart();
+
+function toggleTruth(btn){
+  const card=btn.closest(".myth-card");
+  card.classList.toggle("open");
+  btn.textContent=card.classList.contains("open") ? "Ocultar respuesta ↑" : (card.querySelector(".myth-label").textContent==="MITO" ? "Ver la verdad →" : "¿Por qué? →");
+}
+const revealObserver = new IntersectionObserver((entries)=>{
+  entries.forEach(entry=>{ if(entry.isIntersecting){ entry.target.classList.add("visible"); revealObserver.unobserve(entry.target); }});
+},{threshold:.12});
+document.querySelectorAll(".reveal").forEach(el=>revealObserver.observe(el));
+
+
+function toggleMyth(card){card.classList.toggle("open")}
+const revealObserver=new IntersectionObserver((entries)=>{
+ entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add("visible");revealObserver.unobserve(entry.target)}})
+},{threshold:.12});
+document.querySelectorAll(".reveal").forEach(el=>revealObserver.observe(el));
+
+</script>
+</body>
+</html>
